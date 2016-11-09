@@ -61,22 +61,10 @@
                   onclick="checkForMiddleClick(this, event);"
                   label="&helpKeyboardShortcuts.label;"
                   accesskey="&helpKeyboardShortcuts.accesskey;"/>
-#ifdef MOZ_SERVICES_HEALTHREPORT
-        <menuitem id="healthReport"
-                  label="&healthReport2.label;"
-                  accesskey="&healthReport2.accesskey;"
-                  oncommand="openHealthReport()"
-                  onclick="checkForMiddleClick(this, event);"/>
-#endif
         <menuitem id="troubleShooting"
                   accesskey="&helpTroubleshootingInfo.accesskey;"
                   label="&helpTroubleshootingInfo.label;"
                   oncommand="openTroubleshootingPage()"
-                  onclick="checkForMiddleClick(this, event);"/>
-        <menuitem id="feedbackPage"
-                  accesskey="&helpFeedbackPage.accesskey;"
-                  label="&helpFeedbackPage.label;"
-                  oncommand="openFeedbackPage()"
                   onclick="checkForMiddleClick(this, event);"/>
         <menuitem id="helpSafeMode"
                   accesskey="&helpSafeMode.accesskey;"
