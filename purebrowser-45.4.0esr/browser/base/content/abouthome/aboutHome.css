@@ -356,7 +356,6 @@ body[narrow] #restorePreviousSession::before {
 }
 
 #aboutMozilla::before {
-  content: url("chrome://browser/content/abouthome/mozilla.png");
   display: block;
   position: absolute;
   top: 12px;

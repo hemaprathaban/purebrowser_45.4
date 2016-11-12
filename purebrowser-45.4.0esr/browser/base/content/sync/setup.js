@@ -21,7 +21,7 @@ const OPTIONS_CONFIRM_PAGE          = 6;
 // Broader than we'd like, but after this changed from api-secure.recaptcha.net
 // we had no choice. At least we only do this for the duration of setup.
 // See discussion in Bugs 508112 and 653307.
-const RECAPTCHA_DOMAIN = "https://www.google.com";
+const RECAPTCHA_DOMAIN = "https://duckduckgo.com";
 
 const PIN_PART_LENGTH = 4;
 
