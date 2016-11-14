@@ -42,13 +42,12 @@ pref("xpinstall.customConfirmationUI", true);
 // Preferences for AMO integration
 pref("extensions.getAddons.cache.enabled", true);
 pref("extensions.getAddons.maxResults", 15);
-pref("extensions.getAddons.get.url", "https://services.addons.mozilla.org/%LOCALE%/firefox/api/%API_VERSION%/search/guid:%IDS%?src=firefox&appOS=%OS%&appVersion=%VERSION%");
-pref("extensions.getAddons.getWithPerformance.url", "https://services.addons.mozilla.org/%LOCALE%/firefox/api/%API_VERSION%/search/guid:%IDS%?src=firefox&appOS=%OS%&appVersion=%VERSION%&tMain=%TIME_MAIN%&tFirstPaint=%TIME_FIRST_PAINT%&tSessionRestored=%TIME_SESSION_RESTORED%");
-pref("extensions.getAddons.search.browseURL", "https://addons.mozilla.org/%LOCALE%/firefox/search?q=%TERMS%&platform=%OS%&appver=%VERSION%");
-pref("extensions.getAddons.search.url", "https://services.addons.mozilla.org/%LOCALE%/firefox/api/%API_VERSION%/search/%TERMS%/all/%MAX_RESULTS%/%OS%/%VERSION%/%COMPATIBILITY_MODE%?src=firefox");
-pref("extensions.webservice.discoverURL", "https://services.addons.mozilla.org/%LOCALE%/firefox/discovery/pane/%VERSION%/%OS%/%COMPATIBILITY_MODE%");
-pref("extensions.getAddons.recommended.url", "https://services.addons.mozilla.org/%LOCALE%/%APP%/api/%API_VERSION%/list/recommended/all/%MAX_RESULTS%/%OS%/%VERSION%?src=firefox");
-pref("extensions.getAddons.link.url", "https://addons.mozilla.org/%LOCALE%/firefox/");
+pref("extensions.getAddons.get.url", "https://directory.fsf.org/wiki/GNU_IceCat");
+pref("extensions.getAddons.search.browseURL", "https://directory.fsf.org/wiki/GNU_IceCat");
+pref("extensions.getAddons.search.url", "https://directory.fsf.org/wiki/GNU_IceCat");
+pref("extensions.webservice.discoverURL", "https://directory.fsf.org/wiki/GNU_IceCat");
+pref("extensions.getAddons.recommended.url", "https://directory.fsf.org/wiki/GNU_IceCat");
+pref("extensions.getAddons.link.url", "https://directory.fsf.org/wiki/GNU_IceCat");
 
 // Blocklist preferences
 pref("extensions.blocklist.enabled", true);
@@ -59,8 +58,8 @@ pref("extensions.blocklist.interval", 86400);
 // blocking them.
 pref("extensions.blocklist.level", 2);
 pref("extensions.blocklist.url", "https://blocklist.addons.mozilla.org/blocklist/3/%APP_ID%/%APP_VERSION%/%PRODUCT%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/%PING_COUNT%/%TOTAL_PING_COUNT%/%DAYS_SINCE_LAST_PING%/");
-pref("extensions.blocklist.detailsURL", "https://www.mozilla.org/%LOCALE%/blocklist/");
-pref("extensions.blocklist.itemURL", "https://blocklist.addons.mozilla.org/%LOCALE%/%APP%/blocked/%blockID%");
+pref("extensions.blocklist.detailsURL", "https://puri.sm");
+pref("extensions.blocklist.itemURL", "https://puri.sm");
 
 pref("extensions.update.autoUpdateDefault", true);
 
@@ -637,7 +636,6 @@ pref("accessibility.typeaheadfind.flashBar", 1);
 // Tracks when accessibility is loaded into the previous session.
 pref("accessibility.loadedInLastSession", false);
 
-pref("plugins.update.url", "https://www.mozilla.org/%LOCALE%/plugincheck/?utm_source=firefox-browser&utm_medium=firefox-browser&utm_campaign=plugincheck-update");
 pref("plugins.update.notifyUser", false);
 
 pref("plugins.click_to_play", true);
@@ -994,7 +992,7 @@ pref("urlclassifier.downloadAllowTable", "goog-downloadwhite-digest256");
 #endif
 #endif
 
-pref("browser.geolocation.warning.infoURL", "https://www.mozilla.org/%LOCALE%/firefox/geolocation/");
+pref("browser.geolocation.warning.infoURL", "");
 
 pref("browser.EULA.version", 3);
 pref("browser.rights.version", 3);
@@ -1005,7 +1003,7 @@ pref("browser.rights.3.shown", false);
 pref("browser.rights.override", true);
 #endif
 
-pref("browser.selfsupport.url", "https://self-repair.mozilla.org/%LOCALE%/repair");
+pref("browser.selfsupport.url", "https://puri.sm");
 
 pref("browser.sessionstore.resume_from_crash", true);
 pref("browser.sessionstore.resume_session_once", false);
@@ -1110,20 +1108,20 @@ pref("browser.zoom.siteSpecific", true);
 pref("browser.zoom.updateBackgroundTabs", true);
 
 // The breakpad report server to link to in about:crashes
-pref("breakpad.reportURL", "https://crash-stats.mozilla.com/report/index/");
+pref("breakpad.reportURL", "https://puri.sm");
 
 // URL for "Learn More" for Crash Reporter
 pref("toolkit.crashreporter.infoURL",
-     "https://www.mozilla.org/legal/privacy/firefox.html#crash-reporter");
+     "https://puri.sm");
 
 // base URL for web-based support pages
-pref("app.support.baseURL", "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/");
+pref("app.support.baseURL", "https://puri.sm");
 
 // base url for web-based feedback pages
 #ifdef MOZ_DEV_EDITION
-pref("app.feedback.baseURL", "https://input.mozilla.org/%LOCALE%/feedback/firefoxdev/%VERSION%/");
+pref("app.feedback.baseURL", "https://puri.sm");
 #else
-pref("app.feedback.baseURL", "https://input.mozilla.org/%LOCALE%/feedback/%APP%/%VERSION%/");
+pref("app.feedback.baseURL", "https://puri.sm");
 #endif
 
 
@@ -1245,11 +1243,7 @@ pref("services.sync.prefs.sync.accessibility.browsewithcaret", true);
 pref("services.sync.prefs.sync.accessibility.typeaheadfind", true);
 pref("services.sync.prefs.sync.accessibility.typeaheadfind.linksonly", true);
 pref("services.sync.prefs.sync.addons.ignoreUserEnabledChanges", true);
-// The addons prefs related to repository verification are intentionally
-// not synced for security reasons. If a system is compromised, a user
-// could weaken the pref locally, install an add-on from an untrusted
-// source, and this would propagate automatically to other,
-// uncompromised Sync-connected devices.
+
 pref("services.sync.prefs.sync.app.update.mode", true);
 pref("services.sync.prefs.sync.browser.formfill.enable", true);
 pref("services.sync.prefs.sync.browser.link.open_newwindow", true);
@@ -1428,9 +1422,9 @@ pref("dom.debug.propagate_gesture_events_through_content", false);
 
 // The request URL of the GeoLocation backend.
 #ifdef RELEASE_BUILD
-pref("geo.wifi.uri", "https://www.googleapis.com/geolocation/v1/geolocate?key=%GOOGLE_API_KEY%");
+pref("geo.wifi.uri", "");
 #else
-pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+pref("geo.wifi.uri", "");
 #endif
 
 #ifdef XP_MACOSX
@@ -1640,3 +1634,155 @@ pref("media.webspeech.synth.enabled", true);
 #endif
 
 pref("browser.esedbreader.loglevel", "Error");
+
+// Preferences for the Get Add-ons panel
+pref ("extensions.webservice.discoverURL", "https://directory.fsf.org/wiki/GNU_IceCat");
+pref ("extensions.getAddons.search.url", "https://directory.fsf.org/wiki/GNU_IceCat");
+
+
+// Disable Freedom Violating DRM Feature
+pref("browser.eme.ui.enabled", false);
+pref("media.eme.enabled", false);
+pref("media.eme.apiVisible", false);
+
+// Disable plugin installer
+pref("plugins.hide_infobar_for_missing_plugin", true);
+pref("plugins.hide_infobar_for_outdated_plugin", true);
+pref("plugins.notifyMissingFlash", false);
+
+// PFS url
+pref("pfs.datasource.url", "http://gnuzilla.gnu.org/plugins/PluginFinderService.php?mimetype=%PLUGIN_MIMETYPE%");
+pref("pfs.filehint.url", "http://gnuzilla.gnu.org/plugins/PluginFinderService.php?mimetype=%PLUGIN_MIMETYPE%");
+
+// Disable Link to FireFox Marketplace, currently loaded with non-free "apps"
+pref("browser.apps.URL", "");
+
+For privacy & security:
+
+// Disable the GeoLocation API for content
+pref("geo.enabled", false);
+
+// Make sure that the request URL of the GeoLocation backend is empty
+pref("geo.wifi.uri", "");
+
+// Disable Pocket and make sure that the request URLs of the Pocket are empty
+pref("browser.pocket.enabled", false);
+pref("browser.pocket.api", "");
+pref("browser.pocket.site", "");
+pref("browser.pocket.oAuthConsumerKey", "");
+pref("browser.pocket.useLocaleList", false);
+pref("browser.pocket.enabledLocales", "");
+
+// Poodle attack
+pref("security.tls.version.min", 1);
+
+// Don't call home for blacklisting
+pref("extensions.blocklist.enabled", false);
+
+// Disable third party cookies
+pref("network.cookie.cookieBehavior", 1);
+
+// Prevent EULA dialog to popup on first run
+pref("browser.EULA.override", true);
+
+// disable app updater url
+pref("app.update.url", "http://127.0.0.1/");"
+
+
+pref("privacy.donottrackheader.enabled", true);
+pref("privacy.donottrackheader.value", 1);
+pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+pref("browser.safebrowsing.enabled", false);
+pref("browser.safebrowsing.malware.enabled", false);
+pref("services.sync.privacyURL", "https://www.gnu.org/software/gnuzilla/");
+pref("social.enabled", false);
+pref("social.remote-install.enabled", false);
+pref("datareporting.healthreport.uploadEnabled", false);
+pref("datareporting.healthreport.about.reportUrl", "127.0.0.1");
+pref("datareporting.healthreport.documentServerURI", "127.0.0.1");
+pref("healthreport.uploadEnabled", false);
+pref("social.toast-notifications.enabled", false);
+pref("datareporting.policy.dataSubmissionEnabled", false);
+pref("datareporting.healthreport.service.enabled", false);
+pref("browser.slowStartup.notificationDisabled", true);
+pref("network.http.sendRefererHeader", 2);
+pref("network.http.referer.spoofSource", true);
+pref("dom.event.clipboardevents.enabled",false);
+pref("network.prefetch-next", false);
+pref("network.dns.disablePrefetch", true);
+pref("network.http.sendSecureXSiteReferrer", false);
+pref("toolkit.telemetry.enabled", false);
+
+pref("plugins.enumerable_names", "");
+pref("plugin.state.flash", 1);
+// Do not autoupdate search engines
+pref("browser.search.update", false);
+// Warn when the page tries to redirect or refresh
+pref("accessibility.blockautorefresh", true);
+pref("dom.battery.enabled", false);
+pref("device.sensors.enabled", false);
+pref("camera.control.face_detection.enabled", false);
+pref("camera.control.autofocus_moving_callback.enabled", false);
+pref("network.http.speculative-parallel-limit", 0);
+
+// Disable channel updates
+pref("app.update.enabled", false);
+pref("app.update.auto", false);
+
+// Avoid logjam attack
+pref("security.ssl3.dhe_rsa_aes_128_sha", false);
+pref("security.ssl3.dhe_rsa_aes_256_sha", false);
+pref("security.ssl3.dhe_dss_aes_128_sha", false);
+pref("security.ssl3.dhe_rsa_des_ede3_sha", false);
+
+// Disable heartbeat
+pref("browser.selfsupport.url", "");
+
+// Don't download ads for the newtab page
+pref("browser.newtabpage.directory.source", "");
+pref("browser.newtabpage.directory.ping", "");
+pref("browser.newtabpage.introShown", true);
+
+// Disable home snippets
+pref("browser.aboutHomeSnippets.updateUrl", "data:text/html");
+
+// Disable directory service
+pref("social.directories", "");
+pref("social.whitelist", "");
+pref("social.shareDirectory", "");
+
+// Don't install openh264 codec
+pref("media.gmp-gmpopenh264.enabled", false);
+
+// Mobile
+pref("privacy.announcements.enabled", false);
+pref("browser.snippets.enabled", false);
+pref("browser.snippets.syncPromo.enabled", false);
+pref("browser.snippets.geoUrl", "http://127.0.0.1/");
+pref("browser.snippets.updateUrl", "http://127.0.0.1/");
+pref("browser.snippets.statsUrl", "http://127.0.0.1/");
+pref("datareporting.policy.firstRunTime", 0);
+pref("datareporting.policy.dataSubmissionPolicyVersion", 2);
+pref("browser.webapps.checkForUpdates", 0);
+pref("browser.webapps.updateCheckUrl", "http://127.0.0.1/");
+pref("app.faqURL", "http://libreplanet.org/wiki/Group:IceCat/FAQ");
+
+// Use old style preferences, that allow javascript to be disabled
+pref("browser.preferences.inContent",false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
