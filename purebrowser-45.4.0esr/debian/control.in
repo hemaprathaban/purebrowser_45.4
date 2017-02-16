@@ -77,6 +77,8 @@ Package: @browser@
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         xul-ext-ublock-origin,
+	 xul-ext-adblock-plus,
          fontconfig,
          procps,
          debianutils (>= 1.16),
