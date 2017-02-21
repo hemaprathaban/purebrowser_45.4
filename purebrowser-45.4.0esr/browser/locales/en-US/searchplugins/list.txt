@@ -1,9 +1,0 @@
-ddg
-amazondotcom
-bing
-eBay
-google
-twitter
-wikipedia
-yahoo
-yahoo-en-CA:hidden

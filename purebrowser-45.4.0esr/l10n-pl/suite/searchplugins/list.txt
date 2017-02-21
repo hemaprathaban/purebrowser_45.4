@@ -1,8 +1,0 @@
-allegro-pl
-ddg-pl
-google
-merlin-pl
-pwn-pl
-startpage-pl
-wikipedia-pl
-wolnelektury-pl
