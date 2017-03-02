@@ -61,6 +61,8 @@ Package: purebrowser
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         xul-ext-ublock-origin,
+	 xul-ext-adblock-plus,
          fontconfig,
          procps,
          debianutils (>= 1.16),
@@ -78,7 +80,7 @@ Conflicts: j2re1.4,
 Breaks: xul-ext-torbutton
 Provides: www-browser,
           gnome-www-browser
-Description: Mozilla Firefox web browser
+Description: Pureos web browser
  Purebrowser is a powerful, extensible web browser with support for modern
  web application technologies.
 
