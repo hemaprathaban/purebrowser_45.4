@@ -3,11 +3,11 @@
 %if browser != firefox
 if [ "$1" = "upgrade" ] || [ "$1" = "install" ] ; then
 %if TRANSITION
-    if [ "$(dpkg-divert --listpackage /usr/bin/firefox)" = "iceweasel" ] ; then
-        dpkg-divert --package iceweasel --rename --remove /usr/bin/firefox
+    if [ "$(dpkg-divert --listpackage /usr/bin/purebrowser)" = "iceweasel" ] ; then
+        dpkg-divert --package iceweasel --rename --remove /usr/bin/purebrowser
     fi
 %endif
-    dpkg-divert --package @browser@ --divert /usr/bin/firefox.real --rename /usr/bin/firefox
+    dpkg-divert --package @browser@ --divert /usr/bin/purebrowser.real --rename /usr/bin/purebrowser
 fi
 %endif
 

@@ -2,7 +2,7 @@
 
 %if browser != firefox
 if [ "$1" = "remove" ]; then
-    dpkg-divert --package @browser@ --rename --remove /usr/bin/firefox
+    dpkg-divert --package @browser@ --rename --remove /usr/bin/purebrowser
 fi
 %endif
 
