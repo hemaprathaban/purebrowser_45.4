@@ -1,7 +1,7 @@
 Source: purebrowser
 Section: web
 Priority: optional
-Maintainer: Purism Team <all@puri.sm>
+Maintainer: Pureos Team <all@puri.sm>
 Uploaders: Hema Prathaban <hema.prathaban@puri.sm>
 Build-Depends: autotools-dev,
                debhelper (>= 7.2.3),
@@ -102,8 +102,10 @@ Conflicts: j2re1.4,
            iceweasel (<< 45)
 %endif
 Breaks: xul-ext-torbutton
+Replaces: firefox-esr
 Provides: www-browser,
-          gnome-www-browser
+          gnome-www-browser,
+          firefox-esr
 %define RAW_DESCRIPTION Pureos web browser
 %define LONGDESC1 @Browser@ is a powerful, extensible web browser with support for modern
 %define LONGDESC2 web application technologies.
