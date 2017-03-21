@@ -1,0 +1,7 @@
+Index: purebrowser-45.4.2esr/browser/config/version.txt
+===================================================================
+--- purebrowser-45.4.2esr.orig/browser/config/version.txt
++++ purebrowser-45.4.2esr/browser/config/version.txt
+@@ -1 +1 @@
+-45.4.2
++46.0.0
