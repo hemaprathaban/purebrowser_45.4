@@ -1,3 +1,9 @@
+purebrowser (46.0.0esr-1pureos1.1) landing; urgency=medium
+
+  * replace adblock plus with https everywhere 
+
+ -- Hema Prathaban (Pureos Developer) <hema.prathaban@puri.sm>  Tue, 25 Apr 2017 09:30:44 -0400
+
 purebrowser (46.0.0esr-1pureos1) landing; urgency=medium
 
   * bump version.
