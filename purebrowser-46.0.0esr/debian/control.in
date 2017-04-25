@@ -78,7 +78,7 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          xul-ext-ublock-origin,
-	 xul-ext-adblock-plus,
+	 xul-ext-https-everywhere,
          fontconfig,
          procps,
          debianutils (>= 1.16),
